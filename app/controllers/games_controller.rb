@@ -4,10 +4,10 @@ class GamesController < ApplicationController
     def index
     end
 
-    def show
+    def create
     end
 
-    def create
+    def show
     end
 
     def edit
