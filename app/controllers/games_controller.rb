@@ -4,7 +4,7 @@ class GamesController < ApplicationController
     end
 
     def create
-      game = Game.create(post_params)
+      @game = Game.create(post_params)
       render json: @game
     end
 
@@ -14,6 +14,8 @@ class GamesController < ApplicationController
     end
 
     def edit
+      @game = Game.find(params[:id])
+      render json: @game
     end
 
     private
