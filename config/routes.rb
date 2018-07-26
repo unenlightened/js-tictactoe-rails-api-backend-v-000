@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   root 'home#index'
-  resources games:, only: [:index, :create, :show, :edit]
+  resources :games, only: [:index, :create, :show, :edit]
 end
