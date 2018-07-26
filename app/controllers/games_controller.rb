@@ -15,12 +15,13 @@ class GamesController < ApplicationController
 
     def edit
       @game = Game.find(params[:id])
+      @game.update(game_params)
       render json: @game
     end
 
     private
 
-    def post_params
+    def game_params
 
     end
 end
