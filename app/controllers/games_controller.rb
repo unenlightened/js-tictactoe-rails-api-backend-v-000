@@ -5,6 +5,7 @@ class GamesController < ApplicationController
 
     def create
       game = Game.create(post_params)
+      render json: @game, status: 200
     end
 
     def show
