@@ -5,12 +5,12 @@ class GamesController < ApplicationController
 
     def create
       game = Game.create(post_params)
-      render json: @game, status: 200
+      render json: @game
     end
 
     def show
       @game = Game.find(params[:id])
-      render json: @game, status: 200
+      render json: @game
     end
 
     def edit
